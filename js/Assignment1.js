@@ -1,4 +1,4 @@
-function MenuChoice(selection)
+function AreaSelection(selection)
 {
     document.getElementById("area1").style.visibility = "hidden";
     document.getElementById("area2").style.visibility = "hidden";
