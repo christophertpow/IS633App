@@ -7,11 +7,14 @@ switch (selection)
 {
     case "Area 1":
     document.getElementById("area1").style.visibility = "visible";
+    document.getElementById("placeholder").style.visibility = "hidden";
     break;
     case "Area 2":
     document.getElementById("area2").style.visibility = "visible";
+    document.getElementById("placeholder").style.visibility = "hidden";
     break;
-    case "None": //No menu item selected, so no section should be displayed
+    case "None":
+    document.getElementById("placeholder").style.visibility = "visible";
     break;
     default:
         alert("Please select a different menu option");
