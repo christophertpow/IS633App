@@ -21,9 +21,9 @@ h2 {font-family: sans-serif; text-align: center; color: #DAA520; }
 p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color: white;}
 
 
-#placeholder {height: 580px; width: 600px; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; }
-#area1 {visibility: hidden;  height: 580px; width: 100%;  max-width: 600px; overflow: scroll; background-color: #000080; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;  }
-#area2 {visibility: hidden; height: 580px; width: 100%; max-width: 600px; overflow: scroll; background-color: #079f47; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;  }
+#placeholder {height: 580px; width: 100%; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; }
+#area1 {visibility: hidden;  height: 580px; width: 100%;  max-width: 100%; overflow: scroll; background-color: #000080; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;  }
+#area2 {visibility: hidden; height: 580px; width: 100%; max-width: 100%; overflow: scroll; background-color: #079f47; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;  }
 
 
 
@@ -40,7 +40,7 @@ p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color:
    overflow: hidden;
    background: url(http://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
    height: 34px;
-   width: 360px;
+   width: 300px;
     margin-left: auto;
    margin-right: auto;
    display: block;
@@ -54,7 +54,7 @@ p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color:
     border: 1px solid #ccc;
    font-size: 16px;
    height: 34px;
-   width: 340px;
+   width: 280px;
    margin-left: auto;
    margin-right: auto;
    display: block;
@@ -64,7 +64,7 @@ p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color:
 .dropdown {
    background: url(https://i62.tinypic.com/2e3ybe1.jpg) no-repeat right center;
    height: 34px;
-   width: 360px;
+   width: 300px;
 }
 
 button {
@@ -82,7 +82,7 @@ button {
 }
 
 input[type=text], input[type=number] {
-    width: 200px;
+    width: 175px;
     padding: 12px 20px;
     margin: 8px auto;
     display: block;
@@ -93,7 +93,7 @@ input[type=text], input[type=number] {
 
 
 label {
-    width: 350px;
+    width: 275px;
     margin: 0px auto 0px auto;
     display: block;
     text-align: center;
@@ -118,6 +118,7 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
+    padding: 8px 0px 0px 0px;
 
     }
     
