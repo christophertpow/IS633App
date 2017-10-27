@@ -21,9 +21,9 @@ h2 {font-family: sans-serif; text-align: center; color: #DAA520; }
 p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color: white;}
 
 
-#placeholder {height: 500px; width: 100%; max-width: 600px; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 2%;}
-#area1 {visibility: hidden;  height: 500px; width: 100%;  width: 100%; max-width: 600px; overflow: scroll; background-color: #000080; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 2%;  }
-#area2 {visibility: hidden; height: 500px; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #079f47; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 2%;  }
+#placeholder {height: 500px; width: 100%; max-width: 600px; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 5%;}
+#area1 {visibility: hidden;  height: 500px; width: 100%;  width: 100%; max-width: 600px; overflow: scroll; background-color: #000080; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 5%;  }
+#area2 {visibility: hidden; height: 500px; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #079f47; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 5%;  }
 
 
 
