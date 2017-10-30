@@ -1,14 +1,7 @@
 
-Coralish: #E27D60
-Light blue #85DCB
-Creamsicle #E8A87C
-Dull purple #C38D9E
-Marine green #41B3A3
-
-
 html, body {
   height: 100%;
-  margin: 0;
+  margin: 0px !important;
 }
 .content {
   padding: 20px;
@@ -32,10 +25,10 @@ p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color:
 #historylabel {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 22px; color: white; text-align: center; }
 
 
-#placeholder {height: 480px; width: 100%; max-width: 600px; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; }
-#listsection {visibility: hidden;  height: 75%; width: 100%;  width: 100%; max-width: 600px; overflow: scroll; background-color: #659DBD; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;   }
-#historysection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #C38D9E; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;  }
-#aboutsection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #41B3A3; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block;  }
+#placeholder {height: 75%; width: 100%; max-width: 600px; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; }
+#listsection {visibility: hidden;  height: 75%; width: 100%;  width: 100%; max-width: 600px; overflow: scroll; background-color: #659DBD; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 5%; }
+#historysection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #C38D9E; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 5%;   }
+#aboutsection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #41B3A3; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 5%;   }
 
 
 
