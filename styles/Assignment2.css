@@ -27,7 +27,7 @@ p {padding: 0px 20px; font-family: Helvetica sans-serif; font-size: 20px; color:
 
 #placeholder {height: 75%; width: 100%; max-width: 600px; overflow: scroll; background-color: white; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; }
 #listsection {visibility: hidden;  height: 75%; width: 100%;  width: 100%; max-width: 600px; overflow: scroll; background-color: #659DBD; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 7%; }
-#historysection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #C38D9E; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 10%;   }
+#historysection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #C38D9E; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 40px;   }
 #aboutsection {visibility: hidden; height: 75%; width: 100%; width: 100%;  max-width: 600px; overflow: scroll; background-color: #41B3A3; position: absolute;  left: 0;  right: 0;  margin-left: auto;  margin-right: auto; display: block; padding-bottom: 7%;   }
 
 
