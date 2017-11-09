@@ -282,7 +282,7 @@ function OrderUpdate()
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
     {
         var result = JSON.parse(xmlhttp.responseText);
-        OperationResult (result);  
+        GetResult (result);  
         AreaSelection("Customer List"); //Calls the menu choice function to display the store list
         }
         }
@@ -304,7 +304,7 @@ function OrderUpdate()
         //Function that displays the result of an operation that adds, deletes, or updates data
         //The function is invoked from other functions
         
-function OperationResult(success)
+function GetResult(success)
 {
     switch (success)
     {
