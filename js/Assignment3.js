@@ -78,7 +78,7 @@ function ListCustomers()
     
 function GenerateOutput(result) //This function receives the data form the service and creates a table to display it
 {
-    var display = "<table><tr><th></th><th>Customer ID</th><th>Company Name</th><th>City</th></tr>"; //Table Headings
+    var display = "<table><div class='resptable'><tr><th></th><th>Customer ID</th><th>Company Name</th><th>City</th></tr>"; //Table Headings
     var count = 0; 
     var customerid = ""; 
     var companyname = ""; 
@@ -93,7 +93,7 @@ function GenerateOutput(result) //This function receives the data form the servi
         display += '<tr><td><button onclick="CurrentOrderInfo(' + "'" + customerid + "')" + '">See Current Orders</button></td>  <td>' + customerid + "</td><td>"  + companyname + "</td><td>" + city + "</td></tr>"; //Creates a table row
         }
         
-        display += "</table>"; //Closes the table HTML after table rows are added
+        display += "</table></div>"; //Closes the table HTML after table rows are added
         document.getElementById("customerlist").innerHTML = display; //Displays the table in the HTML page
         }
         }
