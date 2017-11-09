@@ -120,7 +120,7 @@ function CurrentOrderInfo(customerid)
                    
 function CurrentOrderButton(result) 
 {
-    var display = "<p id='historylabel'>Current Order for: " + customerid + "</p><table><tr><th></th><th>Order ID</th><th>Shipping Address</th><th>City</th><th>Name</th><th>Post Code</th></tr>";//Table Headings
+    var display = "<p id='historylabel'>Current Order for: " + customerid + "</p><div class='resptable'><table><tr><th></th><th>Order ID</th><th>Shipping Address</th><th>City</th><th>Name</th><th>Post Code</th></tr>";//Table Headings
     var count = 0; 
     var orderid = ""; 
     var shipaddress = "";
@@ -138,7 +138,7 @@ function CurrentOrderButton(result)
         display += '<tr><td><button onclick="UpdateSingleOrder(' + "'" + orderid + "')" + '">Update Order</button></td><td>' + orderid + "</td><td>" + shipaddress + "</td><td>" + shipcity + "</td><td>" + shipname + "</td><td>" + shippost + "</td></tr>"; //Creates a table row
         }
         
-        display += "</table>"; //Closes the table HTML after table rows are added
+        display += "</table></div>"; //Closes the table HTML after table rows are added
         document.getElementById("currentorders").innerHTML = display; //Displays the table in the HTML page
         document.getElementById('ordercustomeridinput').value = customerid;
         AreaSelection("Current Orders");
@@ -188,12 +188,12 @@ function OrderHistory()
             xmlhttp.send();
             function GenerateOutput(result) //Function that displays results
             {
-                var display = "<p id='historylabel'>Customer Order History for: " + customerid + "</p><table><tr><th>Product Name</th><th>Total Ordered</th></tr>";
+                var display = "<p id='historylabel'>Customer Order History for: " + customerid + "</p><div class='resptable'><table><tr><th>Product Name</th><th>Total Ordered</th></tr>";
                 var count = 0;for(count = 0; count < result.length; count ++)
                 {
                     display += "<tr><td>" + result[count].ProductName + "</td><td>" + result[count].Total + "</td></tr>";
                     }
-                    display += "</table>";
+                    display += "</table></div>";
                     document.getElementById("orderhistory").innerHTML = display;
                     AreaSelection("Customer Order History");
                     }
@@ -220,7 +220,7 @@ function CurrentOrder()
                     
 function CurrentOrderOutput(result) //This function receives the data form the service and creates a table to display it
 {
-    var display = "<p id='historylabel'>Current Order for: " + document.getElementById("ordercustomeridinput").value + "</p><table><tr><th></th><th>Order ID</th><th>Shipping Address</th><th>City</th><th>Name</th><th>Post Code</th></tr>";//Table Headings
+    var display = "<p id='historylabel'>Current Order for: " + document.getElementById("ordercustomeridinput").value + "</p><div class='resptable'><table><tr><th></th><th>Order ID</th><th>Shipping Address</th><th>City</th><th>Name</th><th>Post Code</th></tr>";//Table Headings
     var count = 0; 
     var orderid = ""; 
     var shipaddress = "";
@@ -240,7 +240,7 @@ function CurrentOrderOutput(result) //This function receives the data form the s
         display += '<tr><td><button onclick="UpdateSingleOrder(' + "'" + orderid + "')" + '">Update Order</button></td><td>' + orderid + "</td><td>"  + shipaddress + "</td><td>" + shipcity + "</td><td>" + shipname + "</td><td>" + shippost + "</td></tr>"; //Creates a table row
         }
         
-        display += "</table>"; //Closes the table HTML after table rows are added
+        display += "</table></div>"; //Closes the table HTML after table rows are added
         document.getElementById("currentorders").innerHTML = display; //Displays the table in the HTML page
        
 

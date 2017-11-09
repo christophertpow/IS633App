@@ -51,8 +51,7 @@ td {
 }
 
 table {
- width: 80%;
-    margin: 0px 10% 15px 10%;
+
     border-collapse: collapse;
 }
 
@@ -60,7 +59,11 @@ table a {
   color: #EDC7B7;
 }
 
-
+.resptable {
+   width: 90%;
+   margin: 0px 5% 15px 5%;
+   overflow-x: auto;
+}
 
 
 .dropdown {
