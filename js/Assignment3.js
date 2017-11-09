@@ -5,6 +5,7 @@ function AreaSelection(selection)
      document.getElementById("aboutsection").style.visibility = "hidden";
      document.getElementById("currentorderssection").style.visibility = "hidden";
      document.getElementById("updateorderssection").style.visibility = "hidden";
+     document.getElementById("footer").style.visibility = "visible";
 
 switch (selection)
 {
@@ -15,6 +16,7 @@ switch (selection)
     document.getElementById("aboutsection").style.visibility = "hidden";
     document.getElementById("currentorderssection").style.visibility = "hidden";
      document.getElementById("updateorderssection").style.visibility = "hidden";
+     document.getElementById("footer").style.visibility = "visible";
       ListCustomers();
     break;
     case "Customer Order History":
@@ -24,6 +26,7 @@ switch (selection)
     document.getElementById("aboutsection").style.visibility = "hidden";
     document.getElementById("currentorderssection").style.visibility = "hidden";
      document.getElementById("updateorderssection").style.visibility = "hidden";
+     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Current Orders":
     document.getElementById("listsection").style.visibility = "hidden";
@@ -32,6 +35,7 @@ switch (selection)
     document.getElementById("aboutsection").style.visibility = "hidden";
     document.getElementById("currentorderssection").style.visibility = "visible";
      document.getElementById("updateorderssection").style.visibility = "hidden";
+     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Update Orders":
     document.getElementById("listsection").style.visibility = "hidden";
@@ -40,6 +44,7 @@ switch (selection)
     document.getElementById("aboutsection").style.visibility = "hidden";
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "visible";
+    document.getElementById("footer").style.visibility = "visible";
     break;
     case "About":
     document.getElementById("listsection").style.visibility = "hidden";
@@ -48,9 +53,11 @@ switch (selection)
     document.getElementById("aboutsection").style.visibility = "visible";
     document.getElementById("currentorderssection").style.visibility = "hidden";
      document.getElementById("updateorderssection").style.visibility = "hidden";
+     document.getElementById("footer").style.visibility = "visible";
     break;
     case "None":
     document.getElementById("placeholder").style.visibility = "visible";
+    document.getElementById("footer").style.visibility = "visible";
     break;
     default:
         alert("Please select a different menu option");
@@ -323,4 +330,9 @@ function GetResult(success)
         default:
         alert("The operation code returned is not identifiable.");
     }
+    }
+    
+function HideFooter()
+    {
+        document.getElementById("footer").style.visibility = "hidden";
     }

@@ -43,7 +43,7 @@
 	 
 	  <label><p>Enter the Customer ID:</p></label>
       
-      <input type="text" value="" id="entercustomerid">
+      <input type="text" value="" id="entercustomerid" onfocus="HideFooter()">
       <label class="labelcaption"> The customer ID should be 5 uppercase letters.</label>
 		
 		<button onclick="OrderHistory()" id="getcustomerorderhistory" class="bigbutton">Get Customer Order History</button>
@@ -58,7 +58,7 @@
 	 
 	 <label><p>Enter the Customer ID:</p></label>
       
-      <input type="text" value="" id="ordercustomeridinput">
+      <input type="text" value="" id="ordercustomeridinput" onfocus="HideFooter()">
       <label class="labelcaption"> The customer ID should be 5 uppercase letters.</label>
 		
 		<button onclick="CurrentOrder()" id="getcurrentorder" class="bigbutton">Get Current Order</button>
@@ -76,16 +76,16 @@
                 <input type="text" id="orderid" disabled="true">
                <br>
                 <label class="labelcaption">Shipping Address: </label>
-                <input type="text" id="shipaddress">
+                <input type="text" id="shipaddress" onfocus="HideFooter()">
                 <br>
                 <label class="labelcaption">City: </label>
-                <input type="text" id="shipcity">
+                <input type="text" id="shipcity" onfocus="HideFooter()">
 					 <br>
 					  <label class="labelcaption">Name: </label>
-                <input type="text" id="shipname">
+                <input type="text" id="shipname" onfocus="HideFooter()">
 					  <br>
 					 	<label class="labelcaption">Post Code: </label>
-                <input type="text" id="shippost"> 
+                <input type="text" id="shippost" onfocus="HideFooter()"> 
                  <br>
                  <button onclick="OrderUpdate()" class="bigbutton">Update Order Information</button>
 	 
@@ -106,7 +106,7 @@
 		
 		
 		
-            <footer class="footer"> Chris Pow<br />
+            <footer class="footer" id="footer"> Chris Pow<br />
       <a href="mailto:cpow@uab.edu">cpow@uab.edu</a>
            </footer> 
 		
