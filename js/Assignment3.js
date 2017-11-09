@@ -131,7 +131,7 @@ function CurrentOrderButton(result)
     for(count = 0; count < result.GetOrdersForCustomerResult.length; count ++) //Loop for creating table rows
     { //Anchor link: <a href="javascript:function("parameter");">
         orderid = result.GetOrdersForCustomerResult[count].OrderID; 
-        shipaddress += result.GetOrdersForCustomerResult[count].ShipAddress;
+        shipaddress = result.GetOrdersForCustomerResult[count].ShipAddress;
         shipcity = result.GetOrdersForCustomerResult[count].ShipCity;
         shipname = result.GetOrdersForCustomerResult[count].ShipName;
         shippost = result.GetOrdersForCustomerResult[count].ShipPostcode; 
@@ -233,7 +233,7 @@ function CurrentOrderOutput(result) //This function receives the data form the s
         
         
         orderid = result.GetOrdersForCustomerResult[count].OrderID; 
-        shipaddress += result.GetOrdersForCustomerResult[count].ShipAddress;
+        shipaddress = result.GetOrdersForCustomerResult[count].ShipAddress;
         shipcity = result.GetOrdersForCustomerResult[count].ShipCity;
         shipname = result.GetOrdersForCustomerResult[count].ShipName;
         shippost = result.GetOrdersForCustomerResult[count].ShipPostcode; 
