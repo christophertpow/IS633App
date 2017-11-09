@@ -78,7 +78,7 @@ function ListCustomers()
     
 function GenerateOutput(result) //This function receives the data form the service and creates a table to display it
 {
-    var display = "<table><div class='resptable'><tr><th></th><th>Customer ID</th><th>Company Name</th><th>City</th></tr>"; //Table Headings
+    var display = "<div class='resptable'><table><tr><th></th><th>Customer ID</th><th>Company Name</th><th>City</th></tr>"; //Table Headings
     var count = 0; 
     var customerid = ""; 
     var companyname = ""; 
