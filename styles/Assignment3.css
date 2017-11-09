@@ -47,12 +47,12 @@ table, th, td, tr {
 }
 
 td {
-  padding: 5px;
+  padding: 3px;
 }
 
 table {
      width: 80%;
-     margin: 0px 10% 15px 10%;
+     margin: 0px 5% 15px 5%;
     border-collapse: collapse;
 }
 
