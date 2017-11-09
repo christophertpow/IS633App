@@ -336,3 +336,8 @@ function HideFooter()
     {
         document.getElementById("footer").style.visibility = "hidden";
     }
+
+function ShowFooter()
+    {
+        document.getElementById("footer").style.visibility = "visible";
+    }
