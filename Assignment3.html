@@ -2,14 +2,14 @@
 
 <html>
 <head>
-<title>IS 633 Assignment #4</title>
-<link rel="stylesheet" type="text/css" href="styles/Assignment4.css" />
-<script src="js/Assignment4.js"></script>
+<title>IS 633 Assignment #3</title>
+<link rel="stylesheet" type="text/css" href="styles/Assignment3.css" />
+<script src="js/Assignment3.js"></script>
 </head>
 <body>
 
    <div id="header"><header>
-    <h1>IS 633 Assignment #4</h1>
+    <h1>IS 633 Assignment #3</h1>
     <hr>
 </header></div>
 
@@ -18,7 +18,6 @@
     <select onchange="AreaSelection(value)" id="menu" class="dropdown">
         <option value="None">Please select an option.</option>
         <option value="Customer List">Customer List</option>
-        <option value="Add Customer">Add Customer</option>
         <option value="Customer Order History">Customer Order History</option>
 		  <option value="Current Orders">Current Orders</option>
 		  <option value="Update Orders">Update Orders</option>
@@ -37,7 +36,6 @@
     <section id="listsection">
     <h2>Customer List</h2>
     <div id="customerlist"></div>
-    <button onclick='AreaSelection("Add Customer")' id="backtoadd" class="bigbutton">Add Customer</button>
     </section>
    
     <section id="historysection">
@@ -51,28 +49,6 @@
 		<button onclick="OrderHistory()" id="getcustomerorderhistory" class="bigbutton">Get Customer Order History</button>
 	 
 		<div id="orderhistory"></div>
-		<button onclick='AreaSelection("Customer List")' id="backtolist" class="bigbutton">Return to Customer List</button>
-	
-    </section>
-    
-    <section id="addcustomersection">
-    <h2>Add a Customer</h2>
-	 
-	  <label><span class="toplabel">Enter the Customer ID:</span></label>
-      <input type="text" value="" id="addcustomerid" onfocus="HideFooter()" onblur="ShowFooter()">
-      <label class="labelcaption"> The customer ID should be 5 uppercase letters and cannot match any current customer IDs.</label>
-		
-       <br>
-       <label><span class="toplabel">Company Name:</span></label>
-         <input type="text" id="addcustomername" onfocus="HideFooter()" onblur="ShowFooter()">
-		 <br>
-        <label><span class="toplabel">City:</span></label>
-        <input type="text" id="addcustomercity" onfocus="HideFooter()" onblur="ShowFooter()">
-		<br>
-		
-		<button onclick="CreateCustomer()" id="createcustomer" class="bigbutton">Add Customer</button>
-	 
-		<div id="addcustomer"></div>
 		<button onclick='AreaSelection("Customer List")' id="backtolist" class="bigbutton">Return to Customer List</button>
 	
     </section>
@@ -96,19 +72,19 @@
     <h2>Update Orders</h2>
 	 
         
-                <label><span class="toplabel">Order ID:</span></label>
+                <label class="labelcaption">Order ID: </label>
                 <input type="text" id="orderid" disabled="true">
                <br>
-                <label><span class="toplabel">Shipping Address:</span></label>
+                <label class="labelcaption">Shipping Address: </label>
                 <input type="text" id="shipaddress" onfocus="HideFooter()" onblur="ShowFooter()">
                 <br>
-                <label><span class="toplabel">City:</span></label>
+                <label class="labelcaption">City: </label>
                 <input type="text" id="shipcity" onfocus="HideFooter()" onblur="ShowFooter()">
 					 <br>
-					  <label><span class="toplabel">Name:</span></label>
+					  <label class="labelcaption">Name: </label>
                 <input type="text" id="shipname" onfocus="HideFooter()" onblur="ShowFooter()">
 					  <br>
-					 	<label><span class="toplabel">Post Code:</span></label>
+					 	<label class="labelcaption">Post Code: </label>
                 <input type="text" id="shippost" onfocus="HideFooter()" onblur="ShowFooter()"> 
                  <br>
                  <button onclick="OrderUpdate()" class="bigbutton">Update Order Information</button>
