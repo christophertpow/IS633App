@@ -380,6 +380,9 @@ function CreateOperationResult(output)
     {
         alert("That new customer has been added!");
         AreaSelection("Customer List");
+        document.getElementById("addcustomerid").value = "";
+        document.getElementById("addcustomername").value = "";
+        document.getElementById("addcustomercity").value = "";
         }
         else
         {
