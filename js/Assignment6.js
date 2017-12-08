@@ -504,12 +504,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
     // PhoneGap is loaded and Ready
     //
     function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
     // Display `Position` properties from the geolocation
     //
-    function onGeoSuccess(position) {
+    function onSuccess(position) {
         var div = document.getElementById('latlong');
 
         div.innerHTML = '<h3>Your Location:</h3><br><table><tr><th>Latitude</th><th> Longitude</th></tr><tr><td>' + position.coords.latitude  + '</td><td>' + position.coords.longitude + '</td></tr></table>';
@@ -517,7 +517,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     }
 
     
-    function onGeoError(error) {
+    function onError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
