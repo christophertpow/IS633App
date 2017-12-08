@@ -103,7 +103,7 @@ switch (selection)
     document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
-    case "Camera":
+    case "Contacts":
     document.getElementById("listsection").style.visibility = "hidden";
     document.getElementById("addcustomersection").style.visibility = "hidden";
     document.getElementById("historysection").style.visibility = "hidden";
