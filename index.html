@@ -2,23 +2,10 @@
 
 <html>
 <head>
-<title>IS 633 Assignment #5</title>
+<title>IS 633 Assignment #6</title>
 <link rel="stylesheet" type="text/css" href="styles/Assignment6.css" />
 <script src="js/Assignment6.js"></script>
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
-<script>
-var objContact;
-var picturesource;
-var destinationtype;
-document.addEventListener("deviceready",onDeviceReady,false);
 
-function onDeviceReady()
-{
-	picturesource = navigator.camera.PictureSourceType;
-	destinationtype = navigator.camera.DestinationType;
-	objContact = navigator.contacts.create();
-	}
-</script>
 
 </head>
 <body>
@@ -154,7 +141,7 @@ function onDeviceReady()
 		</section>
 		
 	 
-	 <section id="picture">
+	<!-- <section id="picture">
 		<h2>Take a Picture</h2>
 		
 		<button onclick="CapturePhoto()" class="bigbutton">Take Picture</button>
@@ -173,6 +160,7 @@ function onDeviceReady()
 		<label>Contact Name: </label>
 		<label id="contactname"></label>
 	 </section>
+		-->
 	 
 	 
 	  <section id="aboutsection">
