@@ -7,8 +7,6 @@ function AreaSelection(selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
 
 switch (selection)
@@ -22,8 +20,6 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     ListCustomers();
     break;
@@ -36,8 +32,6 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Customer Order History":
@@ -49,8 +43,6 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Current Orders":
@@ -62,8 +54,6 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "visible";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Update Orders":
@@ -75,8 +65,6 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "visible";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Geolocation":
@@ -88,39 +76,8 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "visible";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
-
-    case "Camera":
-    document.getElementById("listsection").style.visibility = "hidden";
-    document.getElementById("addcustomersection").style.visibility = "hidden";
-    document.getElementById("historysection").style.visibility = "hidden";
-    document.getElementById("placeholder").style.visibility = "hidden";
-    document.getElementById("aboutsection").style.visibility = "hidden";
-    document.getElementById("currentorderssection").style.visibility = "hidden";
-    document.getElementById("updateorderssection").style.visibility = "hidden";
-    document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "visible";
-    document.getElementById("contacts").style.visibility = "hidden";
-    document.getElementById("footer").style.visibility = "visible";
-    break;
-
-    case "Contacts":
-    document.getElementById("listsection").style.visibility = "hidden";
-    document.getElementById("addcustomersection").style.visibility = "hidden";
-    document.getElementById("historysection").style.visibility = "hidden";
-    document.getElementById("placeholder").style.visibility = "hidden";
-    document.getElementById("aboutsection").style.visibility = "hidden";
-    document.getElementById("currentorderssection").style.visibility = "hidden";
-    document.getElementById("updateorderssection").style.visibility = "hidden";
-    document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "visible";
-    document.getElementById("footer").style.visibility = "visible";
-    break;
-
     case "About":
     document.getElementById("listsection").style.visibility = "hidden";
     document.getElementById("addcustomersection").style.visibility = "hidden";
@@ -130,8 +87,6 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
-    document.getElementById("picture").style.visibility = "hidden";
-    document.getElementById("contacts").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "None":
@@ -599,9 +554,6 @@ function watchMapPosition() {
     return navigator.geolocation.watchPosition
     (onMapWatchSuccess, onMapError, { enableHighAccuracy: true });
 }
-
-
-
     
 function HideFooter()
     {
