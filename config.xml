@@ -12,13 +12,12 @@
     
     <author>Chris Pow</author>
     
-   <preference name="phonegap-version" value="cli-6.1.0" />
+   <preference name="phonegap-version" value="cli-6.5.0" />
    <plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
    <plugin name="cordova-plugin-geolocation" spec="2.4.3" />
    <plugin name="cordova-plugin-splashscreen" source="npm" />
-   <plugin name="cordova-plugin-camera" source="npm" />
-   <plugin name="cordova-plugin-contacts" source="npm" />
+   
   
     
 <icon src="icon.png" platform="android" />
