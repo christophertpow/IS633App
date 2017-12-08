@@ -3,14 +3,28 @@
 <html>
 <head>
 <title>IS 633 Assignment #6</title>
-<link rel="stylesheet" type="text/css" href="styles/Assignment5.css" />
-<script src="js/Assignment5.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/Assignment6.css" />
+<script src="js/Assignment6.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+<script>
+	var objContact;
+	var picturesource;
+	var destinationtype;
+	document.addEventListener("deviceready",onDeviceReady,false);
+	
+	function onDeviceReady() {
+	picturesource = navigator.camera.PictureSourceType;
+	destinationtype = navigator.camera.DestinationType;
+	objContact = navigator.contacts.create();
+	}
+</script>
 
 </head>
 <body>
 
    <div id="header"><header>
-    <h1>IS 633 Assignment #5</h1>
+    <h1>IS 633 Assignment #6</h1>
     <hr>
 </header></div>
 
@@ -24,6 +38,8 @@
 		  <option value="Current Orders">Current Orders</option>
 		  <option value="Update Orders">Update Orders</option>
 		  <option value="Geolocation">Geolocation</option>
+		  <option value="camera">Take a Picture</option>
+		  <option value="contacts">Access Contacts</option>
 		  <option value="About">About</option>
     </select>
 </section>
@@ -132,9 +148,26 @@
     </script>
 		 
 	<div id="map"></div>
-    
-	
 		
+		</section>
+		
+		<section id="picture"><h2>Take a Picture</h2>
+		<hr>
+		<button onclick="CapturePhoto()">Take Picture</button>
+		<br>
+		<img id="snapshot" src="" />
+		<br>
+		<br>
+		</section>
+		
+		<section id="contacts">
+			<h2>Access Contacts</h2>
+			<br>
+			<button onclick="PickContact()">Pick A Contact</button>
+			<br>
+			<br>
+			<label>Contact Name: </label>
+			<label id="contactname"></label>
 		</section>
 		
 	  <section id="aboutsection">
