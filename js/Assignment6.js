@@ -596,7 +596,7 @@ function watchMapPosition() {
 }
     
     
- function CapturePhoto() {
+function CapturePhoto() {
     navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
     
     //The onSuccess parameter is the function that is called when the camera app operates successfully
