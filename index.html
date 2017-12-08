@@ -16,6 +16,7 @@
 	picturesource = navigator.camera.PictureSourceType;
 	destinationtype = navigator.camera.DestinationType;
 	objContact = navigator.contacts.create();
+	navigator.geolocation.getCurrentPosition(onSuccess, onError);
 	}
 </script>
 

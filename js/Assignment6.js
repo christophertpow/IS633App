@@ -504,12 +504,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
     // PhoneGap is loaded and Ready
     //
     function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
     }
 
     // Display `Position` properties from the geolocation
     //
-    function onSuccess(position) {
+    function onGeoSuccess(position) {
         var div = document.getElementById('latlong');
 
         div.innerHTML = '<h3>Your Location:</h3><br><table><tr><th>Latitude</th><th> Longitude</th></tr><tr><td>' + position.coords.latitude  + '</td><td>' + position.coords.longitude + '</td></tr></table>';
@@ -517,7 +517,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
     }
 
     
-    function onError(error) {
+    function onGeoError(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
@@ -598,10 +598,6 @@ function watchMapPosition() {
     
 function CapturePhoto() {
     navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
-    
-    //The onSuccess parameter is the function that is called when the camera app operates successfully
-    //The onFail parameter is the function that is called when no picture is returned
-    //The other parameters indicate how the picture is to be handled
     }
     //This function handles the picture returned from the CapturePhoto function and displays it on the web page
     
