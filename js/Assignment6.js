@@ -499,14 +499,9 @@ else {
 
 
 
-document.addEventListener("deviceready", onDeviceReady, false);
-
-    // PhoneGap is loaded and Ready
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
-
+function GetLocation () {
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+}
     // Display `Position` properties from the geolocation
     //
     function onSuccess(position) {
@@ -524,8 +519,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function getMapLocation() {
  
-    navigator.geolocation.getCurrentPosition
-    (onMapSuccess, onMapError, { enableHighAccuracy: true });
+    navigator.geolocation.getCurrentPosition (onMapSuccess, onMapError, { enableHighAccuracy: true });
 }
  
 // Success callback for get geo coordinates
@@ -597,11 +591,11 @@ function watchMapPosition() {
     
     
 function CapturePhoto() {
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
+    navigator.camera.getPicture(onPhotoSuccess, onFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
     }
     //This function handles the picture returned from the CapturePhoto function and displays it on the web page
     
-function onSuccess(imageURI) {
+function onPhotoSuccess(imageURI) {
     var picdisplay = document.getElementById("snapshot");
     picdisplay.style.display = 'block';
     picdisplay.src = imageURI; //Assigns the picture to the image source property of the image on the web page
