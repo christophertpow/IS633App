@@ -649,8 +649,7 @@ function PickContact() {
                                     }, function(err) //Function that operates when nothing is returned
                                     {
                                         alert("Error: " + err);
-}
-);
+});
     }
     
 function HideFooter()
