@@ -7,6 +7,8 @@ function AreaSelection(selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
 
 switch (selection)
@@ -20,6 +22,8 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     ListCustomers();
     break;
@@ -43,6 +47,8 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Current Orders":
@@ -54,6 +60,8 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "visible";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Update Orders":
@@ -65,6 +73,8 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "visible";
     document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "Geolocation":
@@ -76,6 +86,34 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "visible";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
+    document.getElementById("footer").style.visibility = "visible";
+    break;
+    case "Camera":
+    document.getElementById("listsection").style.visibility = "hidden";
+    document.getElementById("addcustomersection").style.visibility = "hidden";
+    document.getElementById("historysection").style.visibility = "hidden";
+    document.getElementById("placeholder").style.visibility = "hidden";
+    document.getElementById("aboutsection").style.visibility = "hidden";
+    document.getElementById("currentorderssection").style.visibility = "hidden";
+    document.getElementById("updateorderssection").style.visibility = "hidden";
+    document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "visible";
+    document.getElementById("contactssection").style.visibility = "hidden";
+    document.getElementById("footer").style.visibility = "visible";
+    break;
+    case "Camera":
+    document.getElementById("listsection").style.visibility = "hidden";
+    document.getElementById("addcustomersection").style.visibility = "hidden";
+    document.getElementById("historysection").style.visibility = "hidden";
+    document.getElementById("placeholder").style.visibility = "hidden";
+    document.getElementById("aboutsection").style.visibility = "hidden";
+    document.getElementById("currentorderssection").style.visibility = "hidden";
+    document.getElementById("updateorderssection").style.visibility = "hidden";
+    document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "visible";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "About":
@@ -87,6 +125,8 @@ switch (selection)
     document.getElementById("currentorderssection").style.visibility = "hidden";
     document.getElementById("updateorderssection").style.visibility = "hidden";
     document.getElementById("geolocation").style.visibility = "hidden";
+    document.getElementById("photosection").style.visibility = "hidden";
+    document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "None":
