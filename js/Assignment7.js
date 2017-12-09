@@ -138,7 +138,7 @@ switch (selection)
     document.getElementById("geolocation").style.visibility = "hidden";
     document.getElementById("photosection").style.visibility = "hidden";
     document.getElementById("contactssection").style.visibility = "hidden";
-    document.getElementById("browsersection").style.visibility = "visble";
+    document.getElementById("browsersection").style.visibility = "visible";
     document.getElementById("footer").style.visibility = "visible";
     break;
     case "About":
