@@ -639,13 +639,13 @@ function SearchContacts() {
     options.filter   = lastnamesearch;
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
-    var fields = [navigator.contacts.fieldType.name];
+    var fields = [navigator.contacts.fieldType.displayName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
     var count="";
-    var table = document.createElement ("table");
-    table = "<label class='toplabel'>Search results for: " + lastname + "</label><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    var searchinfo = document.createElement ("searchinfo");
+    searchinfo = "<label class='toplabel'>Search results for: " + lastname + "</label><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var name = contacts[i].name.formatted;
@@ -660,7 +660,7 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
         }
         
         
-    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
+   searchinfo += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
