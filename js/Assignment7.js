@@ -704,7 +704,7 @@ function onError(contactError) {
     
    
 function openBrowser() {
-   var url = 'https://cordova.apache.org';
+   var url = 'https://student.business.uab.edu/is630qx.html';
    var target = '_blank';
    var options = "location = yes";
    var ref = cordova.InAppBrowser.open(url, target, options);
