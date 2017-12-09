@@ -646,11 +646,10 @@ function SearchContacts(){
 function onSuccess(contacts) {
     var count="";
     var name = contacts[i].name.formatted;
+    var phone = "";
     var searchinfo = document.createElement ("searchinfo");
     searchinfo = "Search results for:" + lastname + "<br>";
     for (var i = 0; i<contacts.length; i++){
-        
-        var phone = "";
         
         if (contacts.phoneNumbers !== null) 
 {
@@ -659,7 +658,6 @@ for (count=0; count < contacts[i].phoneNumbers.length; count++)
 phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
-        
         
     searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br>";
     
