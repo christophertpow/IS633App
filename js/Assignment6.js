@@ -596,7 +596,7 @@ function TakePhoto() {
     //This function handles the picture returned from the CapturePhoto function and displays it on the web page
     
 function onPhotoSuccess(imageURI) {
-    var picdisplay = document.getElementById("snapshot");
+    var picdisplay = document.getElementById("takephotoimage");
     picdisplay.style.display = 'block';
     picdisplay.src = imageURI; //Assigns the picture to the image source property of the image on the web page
     }
