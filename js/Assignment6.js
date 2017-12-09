@@ -681,6 +681,8 @@ function SearchContacts() {
     var options = new ContactFindOptions();
     options.filter = lastname;
     options.multiple = true;
+    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.givenName, navigator.contacts.fieldType.familyName, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
+    options.hasPhoneNumber = true;
     var fields = [navigator.contacts.fieldType.familyName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
