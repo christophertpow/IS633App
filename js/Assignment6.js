@@ -651,7 +651,7 @@ function onSuccess(contacts) {
         
         var name = contacts[i].name.formatted;
         var phone = "";
-        var emails ="";
+        var emails = contacts[i].emails;
         
         if (contacts.phoneNumbers !== null) 
 {
@@ -661,16 +661,9 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
         
-               if (contacts.emails !== null) 
-{
-for (count=0; count < contacts[i].emails.length; count++) 
-{
-emails += contacts[i].emails[count].value + "<br>";
-}
-        }
         
         
-    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td><td>" + (emails) + "</td></tr>";
+    table += "<tr><td>" + name + "</td><td>" + phone + "</td><td>" + emails + "</td></tr>";
     
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
