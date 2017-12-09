@@ -728,7 +728,16 @@ function OpenBrowser() {
    function Exit() {
       console.log('The Browser has been closed.');
    }
-} 
+}
+
+function DeviceInfo () {
+var deviceinfo =  'Device Name: '     + device.name     + '\n' +
+              'Device Cordova: '  + device.cordova  + '\n' +
+              'Device Platform: ' + device.platform + '\n' +
+              'Device UUID: '     + device.uuid     + '\n' +
+              'Device Version: '  + device.version;
+       alert(deviceinfo);
+}
     
 function HideFooter()
     {
