@@ -644,14 +644,14 @@ function SearchContacts(){
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
     var count="";
-    var table = document.createElement ("table");
-    table = "<table><tr><th>Name</th><th>Phone Numbers</th></tr>";
+    var name = contacts[i].name.formatted;
+    var searchinfo = document.createElement ("searchinfo");
+    searchinfo = "Search results for:" + lastname + "<br>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
-        var name = contacts[i].name.formatted;
+        
         if (contacts.phoneNumbers !== null) 
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
@@ -661,10 +661,10 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
         }
         
         
-    table += "<tr><td>" + name + "</td><td>" + phone + "</td></tr></table>";
+    searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br>";
     
     }
-    document.getElementById("searchcontactdisplay").innerHTML = table;
+    document.getElementById("searchcontactdisplay").innerHTML = searchinfo;
 
 }
 function onError(contactError) {
