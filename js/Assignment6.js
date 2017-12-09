@@ -614,7 +614,7 @@ function BrowseContacts() {
                     //Function that operates when a contact is successfully returned
                     {
                         var browseinfo = "";
-                        browseinfo += "<table><tr><th colspan='2'>" + contact.name.displayName + "</th></tr>";
+                        browseinfo += "<table><tr><th colspan='2'>" + contact.displayName + "</th></tr>";
                         var count = 0;
                      
                             if (contact.emails !== null) //Checks for the presence of email addresses
