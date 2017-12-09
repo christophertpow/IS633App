@@ -634,9 +634,9 @@ function BrowseContacts() {
     
 function SearchContacts() {
    
-    var lastnamesearch = document.getElementById("contactlastname").value;
+    var searchlastname = document.getElementById("contactlastname").value;
     var options      = new ContactFindOptions();
-    options.filter   = lastnamesearch;
+    options.filter   = searchlastname;
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
     var fields = [navigator.contacts.fieldType.displayName];
@@ -644,8 +644,8 @@ function SearchContacts() {
     
 function onSuccess(contacts) {
     var count="";
-    var searchinfo = document.createElement ("searchinfo");
-    searchinfo = "<label class='toplabel'>Search results for: " + lastname + "</label><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    var table = document.createElement ("table");
+    table = "<label class='toplabel'>Search results for: " + searchlastname + "</label><br><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var name = contacts[i].name.formatted;
@@ -660,7 +660,7 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
         }
         
         
-   searchinfo += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
+    table += "<tr><td>" + name + "</td><td>" + phone + "</td></tr>";
     
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
