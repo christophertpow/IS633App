@@ -612,7 +612,7 @@ function BrowseContacts() {
                     //Function that operates when a contact is successfully returned
                     {
                         var browseinfo = "";
-                        browseinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
+                        browseinfo += "<table><tr><th colspan='2'>" + contact.name.displayName + "</th></tr>";
                         var count = 0;
                      
                             if (contact.emails !== null) //Checks for the presence of email addresses
@@ -632,7 +632,7 @@ function BrowseContacts() {
     }
     
     
-function SearchContacts() {
+function SearchContactsOld() {
    
     var lastname = document.getElementById("contactlastname").value;
     var options      = new ContactFindOptions();
@@ -674,6 +674,37 @@ function onError(contactError) {
 
 }
     
+    
+function SearchContacts() {
+   
+    var lastname = document.getElementById("contactlastname").value;
+    var options = new ContactFindOptions();
+    options.filter = lastname;
+    options.multiple = true;
+    var fields = [navigator.contacts.fieldType.familyName];
+    navigator.contacts.find(fields, onSuccess, onError, options);
+    
+function onSuccess(contacts) {
+    for (var i = 0; i < contacts.length; i++) {
+        alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
+            "Family Name: "  + contacts[i].name.familyName      + "\n" +
+            "Given Name: "   + contacts[i].name.givenName       + "\n" +
+            "Middle Name: "  + contacts[i].name.middleName      + "\n" +
+            "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
+            "Prefix: "       + contacts[i].name.honorificSuffix);
+    }
+}
+ 
+
+    document.getElementById("searchcontactdisplay").innerHTML = table;
+
+}
+function onError(contactError) {
+    alert('onError!');
+}
+
+
+}
     
     
 function HideFooter()
