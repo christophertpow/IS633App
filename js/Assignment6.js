@@ -612,7 +612,7 @@ function BrowseContacts() {
                     //Function that operates when a contact is successfully returned
                     {
                         var browseinfo = "";
-                        browseinfo += "<table><tr><th colspan='2'>" + contact.name.displayName + "</th></tr>";
+                        browseinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
                         var count = 0;
                      
                             if (contact.emails !== null) //Checks for the presence of email addresses
@@ -675,8 +675,6 @@ function onError(contactError) {
 }
     
     
-
-    
     
 function HideFooter()
     {
@@ -687,4 +685,3 @@ function ShowFooter()
     {
         document.getElementById("footer").style.visibility = "visible";
     }
-    
