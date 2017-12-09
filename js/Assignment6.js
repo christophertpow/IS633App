@@ -681,17 +681,16 @@ function SearchContacts() {
     var options = new ContactFindOptions();
     options.filter = lastname;
     options.multiple = true;
-    var fields = [navigator.contacts.fieldType.familyName];
+    var fields = [navigator.contacts.fieldType.name.familyName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
     for (var i = 0; i < contacts.length; i++) {
         alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
-            "Family Name: "  + contacts[i].name.familyName      + "\n" +
             "Given Name: "   + contacts[i].name.givenName       + "\n" +
-            "Middle Name: "  + contacts[i].name.middleName      + "\n" +
-            "Suffix: "       + contacts[i].name.honorificSuffix + "\n" +
-            "Prefix: "       + contacts[i].name.honorificSuffix);
+            "Family Name: "  + contacts[i].name.familyName      + "\n" +
+            "Phone Numbers: "  + contacts[i].phoneNumbers       + "\n" +
+            "Emails: "         + contacts[i].emails);
     }
 }
  
