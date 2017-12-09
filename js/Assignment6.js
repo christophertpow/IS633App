@@ -647,7 +647,7 @@ function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
     var count="";
     var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Display Name</th><th>Phone Numbers</th/</tr>";
+    table = "<table><tr><th>Name</th><th>Phone Numbers</th></tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
@@ -656,12 +656,12 @@ function onSuccess(contacts) {
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
 {
-phone += contacts[i].phoneNumbers[count].value + ", ";
+phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
         
         
-    table += name + "<br>" + phone + "<br>";
+    table += "<tr><td>" + name + "</td><td>" + phone + "</td></tr></table>";
     
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
