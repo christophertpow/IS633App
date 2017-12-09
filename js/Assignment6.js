@@ -598,7 +598,9 @@ function TakePhoto() {
 function onPhotoSuccess(imageURI) {
     var picdisplay = document.getElementById("takephotoimage");
     picdisplay.style.display = 'block';
-    picdisplay.src = imageURI; //Assigns the picture to the image source property of the image on the web page
+    picdisplay.src = imageURI;
+    alert("Your picture was successfully saved to your photo library");
+    //Assigns the picture to the image source property of the image on the web page
     }
 //This function displays an error message if a picture is not returned
 
@@ -644,8 +646,8 @@ function SearchContacts() {
     
 function onSuccess(contacts) {
     var count="";
-    var table = document.createElement ("table");
-    table = "<label class='toplabel'>Search results for: " + searchlastname + "</label><br><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    var searchinfo = document.createElement ("searchinfo");
+    searchinfo = "<label class='toplabel'>Search results for: " + searchlastname + "</label><br>";
     for (var i = 0; i<contacts.length; i++){
         
         var name = contacts[i].name.formatted;
@@ -660,8 +662,8 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
         }
         
         
-    table += "<tr><td>" + name + "</td><td>" + phone + "</td></tr>";
-    
+    searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br>";
+  
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
 
