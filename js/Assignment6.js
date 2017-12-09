@@ -612,14 +612,14 @@ function BrowseContacts() {
                     //Function that operates when a contact is successfully returned
                     {
                         var contactinfo = "";
-                        contactinfo += "<table><tr><th>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
+                        contactinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
                         var count = 0;
                      
                             if (contact.emails !== null) //Checks for the presence of email addresses
                             {
                                 for(count=0; count < contact.emails.length; count++) //Retrieves all email addresses
                                 {
-                                    contactinfo += "<tr><td>" + contact.emails[count].type + "</td><td>" + contact.emails[count].value + "</td></tr></table";
+                                    contactinfo += "<tr><td>" + contact.emails[count].type + " email: </td><td>" + contact.emails[count].value + "</td></tr></table";
                                     }
                                     }
                                     document.getElementById("contactname").innerHTML = contactinfo;
