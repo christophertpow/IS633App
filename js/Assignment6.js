@@ -661,7 +661,7 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
         
-          if (contact.emails !== null) //Checks for the presence of email addresses
+          if (contacts.emails !== null) //Checks for the presence of email addresses
                 {
                     for(count=0; count < contacts[i].emails.length; count++) //Retrieves all email addresses
                                 {
