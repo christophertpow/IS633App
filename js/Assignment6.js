@@ -632,7 +632,7 @@ function BrowseContacts() {
     }
     
     
-function SearchContactsOld() {
+function SearchContacts() {
    
     var lastname = document.getElementById("contactlastname").value;
     var options      = new ContactFindOptions();
