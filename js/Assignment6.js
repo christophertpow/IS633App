@@ -681,14 +681,12 @@ function SearchContacts() {
     var options = new ContactFindOptions();
     options.filter = lastname;
     options.multiple = true;
-    var fields = [navigator.contacts.fieldType.name.familyName];
+    var fields = [navigator.contacts.fieldType.familyName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
     for (var i = 0; i < contacts.length; i++) {
-        alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
-            "Given Name: "   + contacts[i].name.givenName       + "\n" +
-            "Family Name: "  + contacts[i].name.familyName      + "\n" +
+        alert("Name: "  + contacts[i].name.formatted       + "\n" +
             "Phone Numbers: "  + contacts[i].phoneNumbers       + "\n" +
             "Emails: "         + contacts[i].emails);
     }
