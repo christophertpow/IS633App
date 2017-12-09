@@ -650,16 +650,8 @@ function onSuccess(contacts) {
     for (var i = 0; i<contacts.length; i++){
         
         var name = contacts[i].name.formatted;
-        var phone = "";
+        var phone = contacts[i].phoneNumbers.value;
         var emails = "";
-        
-        if (contacts.phoneNumbers !== null) 
-{
-for (count=0; count < contacts[i].phoneNumbers.length; count++) 
-{
-phone += contacts[i].phoneNumbers[count].value + "<br>";
-}
-        }
         
           if (contacts.emails !== null) //Checks for the presence of email addresses
                 {
