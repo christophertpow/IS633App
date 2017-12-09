@@ -686,9 +686,14 @@ function SearchContacts() {
     
 function onSuccess(contacts) {
     for (var i = 0; i < contacts.length; i++) {
-        alert("Name: "  + contacts[i].name.formatted       + "\n" +
-            "Phone Numbers: "  + contacts[i].phoneNumbers       + "\n" +
-            "Emails: "         + contacts[i].emails);
+       
+       var name = contacts[i].name.formatted;
+       var phones = contacts[i].phoneNumbers;
+       var emails = contacts[i].emails;
+       
+        alert("Name: "  + name + "\n" +
+            "Phone Numbers: "  + phones + "\n" +
+            "Emails: " +  emails);
     }
 }
  
