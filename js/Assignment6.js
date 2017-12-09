@@ -590,7 +590,7 @@ function watchMapPosition() {
 }
     
     
-function Take Photo() {
+function TakePhoto() {
     navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true });
     }
     //This function handles the picture returned from the CapturePhoto function and displays it on the web page
