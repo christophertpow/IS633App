@@ -646,8 +646,8 @@ function SearchContacts() {
 function onSuccess(contacts) {
     alert('Found ' + contacts.length + ' contacts.');
     var count="";
-    var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    var searchinfo = document.createElement ("searchinfo");
+    searchinfo = "<table><tr><th colspan='2'>" + INFO + "</th></tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
@@ -656,15 +656,15 @@ function onSuccess(contacts) {
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
 {
-phone += contacts[i].phoneNumbers[count].value + ", ";
-}
-        }
-        
-        
-    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
+phone += contacts[i].phoneNumbers[count].value + "<br>";
+} 
+          
+    searchinfo += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
-    }
-    document.getElementById("searchcontactdisplay").innerHTML = table;
+    } else { phone += "There are no phone numbers listed for this contact."; }
+    
+    
+    document.getElementById("searchcontactdisplay").innerHTML = searchinfo;
 
 }
 function onError(contactError) {
