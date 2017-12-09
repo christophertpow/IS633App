@@ -651,16 +651,7 @@ function onSuccess(contacts) {
         
         var name = contacts[i].name.formatted;
         var phone = contacts[i].phoneNumbers.value;
-        var emails = "";
-        
-          if (contacts.emails !== null) //Checks for the presence of email addresses
-                {
-                    for(count=0; count < contacts[i].emails.length; count++) //Retrieves all email addresses
-                                {
-                                    emails += contacts[i].emails[count].value + "<br>";
-                                    }
-                                    } else {
-                                        emails += "None listed"; }
+        var emails = contacts[i].emails.value;
         
         
         
@@ -670,6 +661,7 @@ function onSuccess(contacts) {
     document.getElementById("searchcontactdisplay").innerHTML = table;
 
 }
+
 function onError(contactError) {
     alert('onError!');
 }
