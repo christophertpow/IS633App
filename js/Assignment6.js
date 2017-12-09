@@ -638,40 +638,30 @@ function SearchContacts() {
     var options      = new ContactFindOptions();
     options.filter   = lastname;
     options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
+    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
+    options.hasPhoneNumber = true;
     var fields = [navigator.contacts.fieldType.displayName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
     var count="";
     var table = document.createElement ("table");
-    table = "Search results for:" + lastname + "<br><br><table><tr><th>Name</th><th>Phone Numbers</th><th>Emails</th></tr>";
+    table = "Search results for: " + lastname + "<br><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
-        var searchname = contacts[i].name.formatted;
-        var searchphone = "";
-        var searchemail = "";
+        var name = contacts[i].name.formatted;
+        var phone = "";
         
         if (contacts.phoneNumbers !== null) 
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
 {
-searchphone += contacts[i].phoneNumbers[count].value + "<br>";
+phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
         
-            if (contacts.emails !== null) 
-{
-for (count=0; count < contacts[i].emails.length; count++) 
-{
-searchemail += contacts[i].emails[count].value + "<br>";
-}
-        } else {
-            searchemail += "None listed";
-            }
         
-        
-    table += "<tr><td>" + (searchname) + "</td><td>" + (searchphone) + "</td><td>" + (searchemail) + "</td></tr>";
+    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
