@@ -634,7 +634,7 @@ function BrowseContacts() {
     
 function SearchContacts(){
    
-    var lastname = document.getElementById("contactlast").value;
+    var lastname = document.getElementById("contactlastname").value;
     var options      = new ContactFindOptions();
     options.filter   = lastname;
     options.multiple = true;
