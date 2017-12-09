@@ -152,27 +152,21 @@
 		
 		<section id="photosection"><h2>Take a Photo</h2>
 		
-		<h2>Take A Picture</h2>
-    <hr>
-    <button onclick = "Photo() ; ">Take Picture</button>
-    <br>
-    <img id="picturesque" src=""/>
-    <br><br>
+		<button onclick="CapturePhoto()" class="bigbutton">Take Photo Now</button>
+		<br>
+		<img id="snapshot" src="" />
+		<br>
+		<br>
 		</section>
 		
 		<section id="contactssection">
-		<h2>Access Contacts</hr2>
-    <br><hr>
-    <button onclick="ChooseContact() ;">Choose A Contact</button>
-    <br>
-    <hr>
-    <label>Enter Contact Last Name:  </label>
-    <input type= "text" id= "contactlast" size="40" minlength= "1">
-    <br>
-    <button onclick="SearchContact() ;">Search Contacts</button>
-    <br><br>
-    <label>Contact Name</label>
-    <label id="contactname"></label>
+			<h2>Access Contacts</h2>
+			<br>
+			<button onclick="PickContact()" class="bigbutton">Pick A Contact</button>
+			<br>
+			<br>
+			<label>Contact Name: </label>
+			<label id="contactname"></label>
 		</section>
 		
 	  <section id="aboutsection">
