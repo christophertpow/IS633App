@@ -664,7 +664,7 @@ phone += contacts[i].phoneNumbers[count].value + ", ";
     table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
     }
-    document.getElementById("contactname").innerHTML = table;
+    document.getElementById("searchcontactdisplay").innerHTML = table;
 
 }
 function onError(contactError) {
