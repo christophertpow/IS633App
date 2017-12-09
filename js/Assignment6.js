@@ -599,7 +599,7 @@ function onPhotoSuccess(imageURI) {
     var picdisplay = document.getElementById("takephotoimage");
     picdisplay.style.display = 'block';
     picdisplay.src = imageURI;
-    alert("Your picture was successfully saved to your photo library");
+    alert("Your picture was successfully saved to your photo library.");
     //Assigns the picture to the image source property of the image on the web page
     }
 //This function displays an error message if a picture is not returned
@@ -646,7 +646,7 @@ function SearchContacts() {
     
 function onSuccess(contacts) {
     var count="";
-    var searchinfo = "";
+    var searchinfo = document.createElement ("searchinfo");
     searchinfo = "<label class='toplabel'>Search results for: " + searchlastname + "</label><br>";
     for (var i = 0; i<contacts.length; i++){
         
@@ -665,7 +665,7 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
     searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br><br>";
   
     }
-    document.getElementById("searchcontactdisplay").innerHTML = table;
+    document.getElementById("searchcontactdisplay").innerHTML = searchinfo;
 
 }
 function onError(contactError) {
