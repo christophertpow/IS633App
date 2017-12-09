@@ -611,20 +611,15 @@ function BrowseContacts() {
     navigator.contacts.pickContact (function(contact)
                     //Function that operates when a contact is successfully returned
                     {
-                        var contactinfo = "";contactinfo += contact.name.givenName + " " + contact.name.familyName + "<br>";
+                        var contactinfo = "";
+                        contactinfo += "<table><tr><th>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
                         var count = 0;
-                        if (contact.phoneNumbers !== null) //Checks for the presence of phone numbers
-                        {
-                            for (count=0; count < contact.phoneNumbers.length; count++) //Retrieves all the phone numbers
-                        {
-                            contactinfo += contact.phoneNumbers[count].type + ": " + contact.phoneNumbers[count].value + "<br>";
-                            }
-                            }
+                     
                             if (contact.emails !== null) //Checks for the presence of email addresses
                             {
                                 for(count=0; count < contact.emails.length; count++) //Retrieves all email addresses
                                 {
-                                    contactinfo += contact.emails[count].type + ": " + contact.emails[count].value + "<br>";
+                                    contactinfo += "<tr><td>" + contact.emails[count].type + "</td><td>" + contact.emails[count].value + "</td></tr></table";
                                     }
                                     }
                                     document.getElementById("contactname").innerHTML = contactinfo;
@@ -648,14 +643,14 @@ function BrowseContacts() {
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
     var count="";
-    var contacttables = document.createElement ("contacttables");
-   contacttables = "<br>";
+    var table = document.createElement ("table");
+    table = "<table border = 1><tr><th>Display Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
         var name = contacts[i].name.formatted;
-        var emails = contacts[i].emails.formatted;
         if (contacts.phoneNumbers !== null) 
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
@@ -665,7 +660,7 @@ phone += contacts[i].phoneNumbers[count].value + ", ";
         }
         
         
-    contacttables += "<div class='resptable'><table><tr><th>" + name + "</th></tr>  <tr><td>Phone:</td><td>" + phone + "</td></tr><tr><td>Email:</td><td>" + emails + "</td></tr></table></div><br /><br />";
+    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
     }
     document.getElementById("contactname").innerHTML = table;
