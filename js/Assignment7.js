@@ -761,10 +761,10 @@ var deviceinfo =
               'Device Platform: ' + device.platform + '\n' +
                  'Device Manufacturer: ' + device.manufacturer     + '\n' + 
                 'Device Model/Product: ' + device.model     + '\n' +
-              'Device Cordova: '  + device.cordova  + '\n' +
+               'OS Version: '  + device.version   + '\n' +
               'Device UUID: '     + device.uuid     + '\n' +
-              'Device Version: '  + device.version   + '\n' +
-              'Device Serial No.: '  + device.serial;
+              'Device Serial No.: '  + device.serial + '\n' +
+               'Cordova Version: '  + device.cordova  ;
        alert(deviceinfo);
 }
     
