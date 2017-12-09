@@ -644,10 +644,9 @@ function SearchContacts() {
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
     var count="";
     var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    table = "Search results for:" + lastname + "<br><br><table border = 1><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
@@ -656,7 +655,7 @@ function onSuccess(contacts) {
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
 {
-phone += contacts[i].phoneNumbers[count].value + ", ";
+phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
         
