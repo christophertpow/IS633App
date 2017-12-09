@@ -621,7 +621,8 @@ function BrowseContacts() {
                                 {
                                     contactinfo += "<tr><td>" + contact.emails[count].type + " email: </td><td>" + contact.emails[count].value + "</td></tr></table";
                                     }
-                                    }
+                                    } else {
+                                        contactinfo += "<tr><td colspan='2'>This contact does not have any emails listed. Below are this contact's phone numbers.</td></tr><tr><td>" + contact.phoneNumbers[count].type + " phone: </td><td>" + contact.phoneNumbers[count].value + "</td></tr></table"; }
                                     document.getElementById("browsecontactdisplay").innerHTML = contactinfo;
                                     }, function(err) //Function that operates when nothing is returned
                                     {
