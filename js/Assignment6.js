@@ -611,19 +611,19 @@ function BrowseContacts() {
     navigator.contacts.pickContact (function(contact)
                     //Function that operates when a contact is successfully returned
                     {
-                        var contactinfo = "";
-                        contactinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
+                        var browseinfo = "";
+                        browseinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
                         var count = 0;
                      
                             if (contact.emails !== null) //Checks for the presence of email addresses
                             {
                                 for(count=0; count < contact.emails.length; count++) //Retrieves all email addresses
                                 {
-                                    contactinfo += "<tr><td>" + contact.emails[count].type + " email: </td><td>" + contact.emails[count].value + "</td></tr></table";
+                                    browseinfo += "<tr><td>" + contact.emails[count].type + " email: </td><td>" + contact.emails[count].value + "</td></tr></table";
                                     }
                                     } else {
-                                        contactinfo += "<tr><td colspan='2'>This contact does not have any emails listed. Below are this contact's phone numbers.</td></tr><tr><td>" + contact.phoneNumbers[count].type + " phone: </td><td>" + contact.phoneNumbers[count].value + "</td></tr></table"; }
-                                    document.getElementById("browsecontactdisplay").innerHTML = contactinfo;
+                                        browseinfo += "<tr><td colspan='2'>This contact does not have any emails listed. Below are this contact's phone numbers.</td></tr><tr><td>" + contact.phoneNumbers[count].type + " phone: </td><td>" + contact.phoneNumbers[count].value + "</td></tr></table>"; }
+                                    document.getElementById("browsecontactdisplay").innerHTML = browseinfo;
                                     }, function(err) //Function that operates when nothing is returned
                                     {
                                         alert("Error: " + err);
@@ -632,7 +632,7 @@ function BrowseContacts() {
     }
     
     
-    function SearchContacts() {
+function SearchContacts() {
    
     var lastname = document.getElementById("contactlast").value;
     var options = new ContactFindOptions();
@@ -645,27 +645,36 @@ function BrowseContacts() {
     
 function onSuccess(contacts) {
     var count="";
-    var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Display Name</th><th>Phone Numbers</th/</tr>";
+    var searchinfo = document.createElement ("searchinfo");
+    searchinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
     for (var i = 0; i<contacts.length; i++){
-        
-        var phone = "";
-        var name = contacts[i].name.formatted;
+       
         if (contacts.phoneNumbers !== null) 
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
 {
-phone += contacts[i].phoneNumbers[count].value + ", ";
+ searchinfo += "<tr><td>" + contact.phoneNumbers[count].type + " email: </td><td>" + contact.phoneNumbers[count].value + "</td></tr>";
 }
-        }
+        } else { searchinfo += ""; }
         
-        
-    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
+   
+    if (contacts.emails !== null) 
+{
+for (count=0; count < contacts[i].emails.length; count++) 
+{
+searchinfo += "<tr><td>" + contact.emails[count].type + "</td><td>" + contact.emails[count].value + "</td></tr></table>";
+}
+        } else { searchinfo += "</table>"; } 
+
     
     }
-    document.getElementById("searchcontactdisplay").innerHTML = table;
+    
+    
+    document.getElementById("searchcontactdisplay").innerHTML = searchinfo;
 
 }
+
+
 function onError(contactError) {
     alert('onError!');
 }
