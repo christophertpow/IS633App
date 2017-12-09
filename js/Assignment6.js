@@ -622,7 +622,7 @@ function BrowseContacts() {
                                     contactinfo += "<tr><td>" + contact.emails[count].type + " email: </td><td>" + contact.emails[count].value + "</td></tr></table";
                                     }
                                     }
-                                    document.getElementById("contactname").innerHTML = contactinfo;
+                                    document.getElementById("browsecontactdisplay").innerHTML = contactinfo;
                                     }, function(err) //Function that operates when nothing is returned
                                     {
                                         alert("Error: " + err);
@@ -634,16 +634,15 @@ function BrowseContacts() {
     function SearchContacts() {
    
     var lastname = document.getElementById("contactlast").value;
-    var options      = new ContactFindOptions();
-    options.filter   = lastname;
+    var options = new ContactFindOptions();
+    options.filter = lastname;
     options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
+    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.emails, navigator.contacts.fieldType.phoneNumbers];
     options.hasPhoneNumber = true;
     var fields = [navigator.contacts.fieldType.displayName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
     var count="";
     var table = document.createElement ("table");
     table = "<table border = 1><tr><th>Display Name</th><th>Phone Numbers</th/</tr>";
@@ -663,7 +662,7 @@ phone += contacts[i].phoneNumbers[count].value + ", ";
     table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
     }
-    document.getElementById("contactname").innerHTML = table;
+    document.getElementById("searchcontactdisplay").innerHTML = table;
 
 }
 function onError(contactError) {
