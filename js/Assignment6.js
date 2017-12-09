@@ -651,7 +651,7 @@ function onSuccess(contacts) {
         
         var name = contacts[i].name.formatted;
         var phone = "";
-        var emails = contacts[i].emails;
+        var emails = "";
         
         if (contacts.phoneNumbers !== null) 
 {
@@ -660,6 +660,15 @@ for (count=0; count < contacts[i].phoneNumbers.length; count++)
 phone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
+        
+          if (contact.emails !== null) //Checks for the presence of email addresses
+                {
+                    for(count=0; count < contacts[i].emails.length; count++) //Retrieves all email addresses
+                                {
+                                    emails += contacts[i].emails[count].value + "<br>";
+                                    }
+                                    } else {
+                                        emails += "None listed"; }
         
         
         
