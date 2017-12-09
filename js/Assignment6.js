@@ -646,7 +646,7 @@ function SearchContacts() {
     
 function onSuccess(contacts) {
     var count="";
-    var searchinfo = document.createElement ("searchinfo");
+    var searchinfo = "";
     searchinfo = "<label class='toplabel'>Search results for: " + searchlastname + "</label><br>";
     for (var i = 0; i<contacts.length; i++){
         
