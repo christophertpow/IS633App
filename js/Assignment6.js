@@ -661,15 +661,8 @@ searchphone += contacts[i].phoneNumbers[count].value + "<br>";
 }
         }
         
-         if (contacts.emails !== null) 
-{
-for (count=0; count < contacts[i].emails.length; count++) 
-{
-searchemail += contacts[i].emails[count].value + "<br>";
-}
-        } 
         
-    table += "<tr><td>" + searchname + "</td><td>" + searchphone + "</td><td>" + searchemail + "</td></tr>";
+    table += "<tr><td>" + (searchname) + "</td><td>" + (searchphone) + "</td><td>" + (searchemail) + "</td></tr>";
     
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
