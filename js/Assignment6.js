@@ -591,7 +591,7 @@ function watchMapPosition() {
     
     
 function TakePhoto() {
-    navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, { quality: 20, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true, targetWidth: 380});
+    navigator.camera.getPicture(onPhotoSuccess, onPhotoFail, { quality: 40, destinationtype: destinationtype.FILE_URI, saveToPhotoAlbum: true, targetWidth: 300});
     }
     //This function handles the picture returned from the CapturePhoto function and displays it on the web page
     
@@ -648,14 +648,14 @@ function BrowseContacts() {
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
-    alert('Found ' + contacts.length + ' contacts.');
     var count="";
-    var table = document.createElement ("table");
-    table = "<table border = 1><tr><th>Display Name</th><th>Phone Numbers</th/</tr>";
+    var contacttables = document.createElement ("contacttables");
+   contacttables = "<br>";
     for (var i = 0; i<contacts.length; i++){
         
         var phone = "";
         var name = contacts[i].name.formatted;
+        var emails = contacts[i].emails.formatted;
         if (contacts.phoneNumbers !== null) 
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
@@ -665,7 +665,7 @@ phone += contacts[i].phoneNumbers[count].value + ", ";
         }
         
         
-    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
+    contacttables += "<div class='resptable'><table><tr><th>" + name + "</th></tr>  <tr><td>Phone:</td><td>" + phone + "</td></tr><tr><td>Email:</td><td>" + emails + "</td></tr></table></div><br /><br />";
     
     }
     document.getElementById("contactname").innerHTML = table;
