@@ -696,9 +696,7 @@ function onSuccess(contacts) {
 }
  
 
-    document.getElementById("searchcontactdisplay").innerHTML = table;
 
-}
 function onError(contactError) {
     alert('onError!');
 }
