@@ -632,7 +632,7 @@ function BrowseContacts() {
     }
     
     
-function SearchContacts(){
+function SearchContact(){
    
     var lastname = document.getElementById("contactlastname").value;
     var options      = new ContactFindOptions();
@@ -644,25 +644,27 @@ function SearchContacts(){
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
     var count="";
-    var name = contacts[i].name.formatted;
-    var phone = "";
-    var searchinfo = document.createElement ("searchinfo");
-    searchinfo = "Search results for:" + lastname + "<br>";
+    var table = document.createElement ("table");
+    table = "<table border = 1><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
+        var phone = "";
+        var name = contacts[i].name.formatted;
         if (contacts.phoneNumbers !== null) 
 {
 for (count=0; count < contacts[i].phoneNumbers.length; count++) 
 {
-phone += contacts[i].phoneNumbers[count].value + "<br>";
+phone += contacts[i].phoneNumbers[count].value + ", ";
 }
         }
         
-    searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br>";
+        
+    table += "<tr><td>" + (name) + "</td><td>" + (phone) + "</td></tr>";
     
     }
-    document.getElementById("searchcontactdisplay").innerHTML = searchinfo;
+    document.getElementById("searchcontactdisplay").innerHTML = table;
 
 }
 function onError(contactError) {
