@@ -634,7 +634,7 @@ function BrowseContacts() {
     
 function SearchContacts() {
    
-    var lastname = document.getElementById("contactlast").value;
+    var lastname = document.getElementById("contactlastname").value;
     var options = new ContactFindOptions();
     options.filter = lastname;
     options.multiple = true;
@@ -645,7 +645,7 @@ function SearchContacts() {
     
 function onSuccess(contacts) {
     var count="";
-    var searchinfo = document.createElement ("searchinfo");
+    var searchinfo = "";
     searchinfo += "<table><tr><th colspan='2'>" + contact.name.givenName + " " + contact.name.familyName + "</th></tr>";
     for (var i = 0; i<contacts.length; i++){
        
@@ -655,7 +655,7 @@ for (count=0; count < contacts[i].phoneNumbers.length; count++)
 {
  searchinfo += "<tr><td>" + contact.phoneNumbers[count].type + " email: </td><td>" + contact.phoneNumbers[count].value + "</td></tr>";
 }
-        } else { searchinfo += ""; }
+        } else { searchinfo += "<tr><td colspan='2'>This contact has no phone numbers listed.</td></tr>"; }
         
    
     if (contacts.emails !== null) 
@@ -664,7 +664,7 @@ for (count=0; count < contacts[i].emails.length; count++)
 {
 searchinfo += "<tr><td>" + contact.emails[count].type + "</td><td>" + contact.emails[count].value + "</td></tr></table>";
 }
-        } else { searchinfo += "</table>"; } 
+        } else { searchinfo += "<tr><td colspan='2'>This contact has no emails listed.</td></tr></table>"; } 
 
     
     }
