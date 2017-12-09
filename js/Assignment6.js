@@ -639,7 +639,7 @@ function SearchContacts() {
     options.filter   = searchlastname;
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.familyName, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
-    var fields = [navigator.contacts.fieldType.familyName];
+    var fields = [navigator.contacts.fieldType.displayName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
