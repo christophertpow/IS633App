@@ -757,11 +757,14 @@ function OpenBrowser() {
 }
 
 function DeviceInfo () {
-var deviceinfo =  'Device Name: '     + device.name     + '\n' +
-              'Device Cordova: '  + device.cordova  + '\n' +
+var deviceinfo =  
               'Device Platform: ' + device.platform + '\n' +
+                 'Device Manufacturer: ' + device.manufacturer     + '\n' + 
+                'Device Model/Product: ' + device.model     + '\n' +
+              'Device Cordova: '  + device.cordova  + '\n' +
               'Device UUID: '     + device.uuid     + '\n' +
-              'Device Version: '  + device.version;
+              'Device Version: '  + device.version   + '\n' +
+              'Device Serial No.: '  + device.serial;
        alert(deviceinfo);
 }
     
