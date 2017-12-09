@@ -140,7 +140,6 @@ switch (selection)
     document.getElementById("contactssection").style.visibility = "hidden";
     document.getElementById("browsersection").style.visibility = "visble";
     document.getElementById("footer").style.visibility = "visible";
-    openBrowser();
     break;
     case "About":
     document.getElementById("listsection").style.visibility = "hidden";
@@ -703,31 +702,31 @@ function onError(contactError) {
 }
     
    
-function openBrowser() {
+function OpenBrowser() {
    var url = 'https://student.business.uab.edu/is630qx.html';
    var target = '_blank';
    var options = "location = yes";
    var ref = cordova.InAppBrowser.open(url, target, options);
    
-   ref.addEventListener('loadstart', loadstartCallback);
-   ref.addEventListener('loadstop', loadstopCallback);
-   ref.addEventListener('loadloaderror', loaderrorCallback);
-   ref.addEventListener('exit', exitCallback);
+   ref.addEventListener('loadstart', loadStart);
+   ref.addEventListener('loadstop', loadStop);
+   ref.addEventListener('loadloaderror', loadError);
+   ref.addEventListener('exit', Exit);
 
-   function loadstartCallback(event) {
+   function loadStart(event) {
       console.log('Loading started: '  + event.url);
    }
 
-   function loadstopCallback(event) {
+   function loadStop(event) {
       console.log('Loading finished: ' + event.url);
    }
 
-   function loaderrorCallback(error) {
-      console.log('Loading error: ' + error.message);
+   function loadError(error) {
+      console.log('Error: ' + error.message);
    }
 
-   function exitCallback() {
-      console.log('Browser is closed...');
+   function Exit() {
+      console.log('The Browser has been closed.');
    }
 } 
     
