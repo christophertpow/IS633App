@@ -646,7 +646,7 @@ function SearchContacts() {
 function onSuccess(contacts) {
     var count="";
     var table = document.createElement ("table");
-    table = "Search results for: " + lastname + "<br><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
+    table = "<label class='toplabel'>Search results for: " + lastname + "</label><br><br><table><tr><th>Name</th><th>Phone Numbers</th/</tr>";
     for (var i = 0; i<contacts.length; i++){
         
         var name = contacts[i].name.formatted;
