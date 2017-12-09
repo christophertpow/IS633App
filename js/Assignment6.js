@@ -649,8 +649,27 @@ function onSuccess(contacts) {
     for (var i = 0; i<contacts.length; i++){
         
         var searchname = contacts[i].name.formatted;
-        var searchphone = contact[i].phoneNumbers.value;
-        var searchemail = contacts[i].emails.value;
+        var searchphone = "";
+        var searchemail = "";
+        
+        if (contacts.phoneNumbers !== null) 
+{
+for (count=0; count < contacts[i].phoneNumbers.length; count++) 
+{
+searchphone += contacts[i].phoneNumbers[count].value + "<br>";
+}
+        }
+        
+            if (contacts.emails !== null) 
+{
+for (count=0; count < contacts[i].emails.length; count++) 
+{
+searchemail += contacts[i].emails[count].value + "<br>";
+}
+        } else {
+            searchemail += "None listed";
+            }
+        
         
     table += "<tr><td>" + (searchname) + "</td><td>" + (searchphone) + "</td><td>" + (searchemail) + "</td></tr>";
     
