@@ -640,7 +640,7 @@ function SearchContactsOld() {
     options.multiple = true;
     options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name, navigator.contacts.fieldType.phoneNumbers];
     options.hasPhoneNumber = true;
-    var fields = [navigator.contacts.fieldType.displayName];
+    var fields = [navigator.contacts.fieldType.familyName];
     navigator.contacts.find(fields, onSuccess, onError, options);
     
 function onSuccess(contacts) {
@@ -674,39 +674,6 @@ function onError(contactError) {
 
 }
     
-    
-function SearchContacts() {
-   
-    var lastname = document.getElementById("contactlastname").value;
-    var options = new ContactFindOptions();
-    options.filter = lastname;
-    options.multiple = true;
-    options.desiredFields = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.givenName, navigator.contacts.fieldType.familyName, navigator.contacts.fieldType.phoneNumbers, navigator.contacts.fieldType.emails];
-    options.hasPhoneNumber = true;
-    var fields = [navigator.contacts.fieldType.familyName];
-    navigator.contacts.find(fields, onSuccess, onError, options);
-    
-function onSuccess(contacts) {
-    for (var i = 0; i < contacts.length; i++) {
-       
-       var name = contacts[i].name.formatted;
-       var phones = contacts[i].phoneNumbers;
-       var emails = contacts[i].emails;
-       
-        alert("Name: "  + name + "\n" +
-            "Phone Numbers: "  + phones + "\n" +
-            "Emails: " +  emails);
-    }
-}
- 
-
-
-function onError(contactError) {
-    alert('onError!');
-}
-
-
-}
     
     
 function HideFooter()
