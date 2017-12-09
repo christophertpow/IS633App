@@ -662,7 +662,7 @@ phone += contacts[i].phoneNumbers[count].value + "<br>";
         }
         
         
-    searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br>";
+    searchinfo += "<strong>" + name + "</strong><br>" + phone + "<br><br>";
   
     }
     document.getElementById("searchcontactdisplay").innerHTML = table;
